@@ -302,7 +302,6 @@ class Activity extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         width: 40,
@@ -318,6 +317,7 @@ class Activity extends StatelessWidget {
                           ),
                         ),
                       ),
+                      SizedBox(width: 10),
                       Text(
                         "List Of \nSchedule",
                         style: TextStyle(
@@ -341,7 +341,6 @@ class Activity extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         width: 40,
@@ -357,6 +356,7 @@ class Activity extends StatelessWidget {
                           ),
                         ),
                       ),
+                      SizedBox(width: 10),
                       Text(
                         "Doctor's \nDaily Post",
                         style: TextStyle(
