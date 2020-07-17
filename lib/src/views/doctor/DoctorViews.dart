@@ -151,7 +151,7 @@ class Categories extends StatelessWidget {
                   }),
                 ),
                 Container(
-                  height: 240,
+                  height: MediaQuery.of(context).size.height * .35,
                   child: TabBarView(
                     children: [
                       AdultsCategorie(doctorCategories: doctorCategories),
@@ -190,8 +190,8 @@ class AdultsCategorie extends StatelessWidget {
         children: List.generate(doctorCategories.length, (index) {
           return Container(
             padding: EdgeInsets.all(16.0),
-            width: 150,
-            margin: EdgeInsets.only(right: 16),
+            width: MediaQuery.of(context).size.width * .4,
+            margin: EdgeInsets.only(right: 8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -250,7 +250,8 @@ class Doctors extends StatelessWidget {
             height: 16,
           ),
           Container(
-            height: 70,
+            height: MediaQuery.of(context).size.height * .12,
+            width: double.infinity,
             decoration: BoxDecoration(
               color: Color.fromRGBO(255, 238, 224, 1),
               borderRadius: BorderRadius.all(
@@ -267,8 +268,8 @@ class Doctors extends StatelessWidget {
                       Navigator.pushNamed(context, "/doctor/profile");
                     },
                     child: Container(
-                      height: 50,
-                      width: 50,
+                      height: MediaQuery.of(context).size.height * .09,
+                      width: MediaQuery.of(context).size.width * .15,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage("images/doctors/doctor.jpg"),
@@ -285,7 +286,8 @@ class Doctors extends StatelessWidget {
                       Navigator.pushNamed(context, "/doctor/profile");
                     },
                     child: Container(
-                      height: 40,
+                      padding: EdgeInsets.only(right: 8),
+                      height: MediaQuery.of(context).size.height * .07,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -293,7 +295,7 @@ class Doctors extends StatelessWidget {
                             "Dr. Stefani Albert",
                             style: TextStyle(
                               color: Color.fromRGBO(251, 158, 73, 1),
-                              fontSize: 20,
+                              fontSize: 16,
                             ),
                           ),
                           Text("Heart Specialist"),
@@ -301,19 +303,22 @@ class Doctors extends StatelessWidget {
                       ),
                     ),
                   ),
-                  FlatButton(
-                    child: Text(
-                      "Call",
-                      style: TextStyle(
-                        color: Colors.white,
+                  Container(
+                    width: MediaQuery.of(context).size.width * .15,
+                    height: MediaQuery.of(context).size.height * .05,
+                    child: Center(
+                      child: Text(
+                        "Call",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                    onPressed: () {},
-                    color: Color.fromRGBO(251, 158, 73, 1),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(251, 158, 73, 1),
+                      borderRadius: BorderRadius.all(Radius.circular(16)),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

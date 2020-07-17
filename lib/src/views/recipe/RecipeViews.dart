@@ -11,7 +11,7 @@ class Recipe extends StatelessWidget {
             children: [
               Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(4.0),
                   child: TextField(
                     decoration: InputDecoration(
                       prefixIcon: Icon(
@@ -19,10 +19,7 @@ class Recipe extends StatelessWidget {
                         color: Colors.black,
                       ),
                       hintText: "Search",
-                      suffixIcon: FlatButton(
-                        onPressed: () {},
-                        child: Icon(Icons.filter_list),
-                      ),
+                      suffixIcon: Icon(Icons.filter_list),
                       border: InputBorder.none,
                     ),
                   ),
@@ -164,7 +161,7 @@ class RecipeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        width: 280,
+        width: MediaQuery.of(context).size.width * 0.7,
         child: Column(
           children: [
             Container(
@@ -270,7 +267,7 @@ class CategorieCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        width: 140,
+        width: MediaQuery.of(context).size.width * 0.5,
         child: Center(
           child: Text(
             categorie,

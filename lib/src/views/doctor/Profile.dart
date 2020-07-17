@@ -6,7 +6,7 @@ class Profile extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(24.0),
+          padding: EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -39,11 +39,11 @@ class Info extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: MediaQuery.of(context).size.height * .28,
       child: Row(
         children: [
           Container(
-            width: 150,
+            width: MediaQuery.of(context).size.width * .35,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(16)),
               image: DecorationImage(
@@ -53,10 +53,10 @@ class Info extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 24,
+            width: 16,
           ),
           Container(
-            width: 184,
+            width: MediaQuery.of(context).size.width * .5,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -68,31 +68,38 @@ class Info extends StatelessWidget {
                       Text(
                         "Dr. Stefeni Albert",
                         style: TextStyle(
-                            fontSize: 32, fontWeight: FontWeight.bold),
+                          fontSize: 32,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       SizedBox(
                         height: 8,
                       ),
                       Text(
                         "Heart Specialist",
-                        style: TextStyle(fontSize: 16, color: Colors.grey),
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey,
+                        ),
                       ),
                     ],
                   ),
                 ),
                 Container(
-                  height: 50,
+                  height: MediaQuery.of(context).size.height * .10,
+                  width: MediaQuery.of(context).size.width * .6,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Container(
                         child: Icon(
                           Icons.mail,
-                          size: 32,
+                          size: 24,
                           color: Color.fromRGBO(251, 185, 124, 1),
                         ),
-                        width: 48,
-                        height: 48,
+                        width: MediaQuery.of(context).size.width * .15,
+                        height: MediaQuery.of(context).size.height * .08,
                         decoration: BoxDecoration(
                           color: Color.fromRGBO(254, 232, 215, 1),
                           borderRadius: BorderRadius.all(
@@ -103,11 +110,11 @@ class Info extends StatelessWidget {
                       Container(
                         child: Icon(
                           Icons.phone,
-                          size: 32,
+                          size: 24,
                           color: Color.fromRGBO(251, 115, 125, 1),
                         ),
-                        width: 48,
-                        height: 48,
+                        width: MediaQuery.of(context).size.width * .15,
+                        height: MediaQuery.of(context).size.height * .08,
                         decoration: BoxDecoration(
                           color: Color.fromRGBO(254, 241, 239, 1),
                           borderRadius: BorderRadius.all(
@@ -118,11 +125,11 @@ class Info extends StatelessWidget {
                       Container(
                         child: Icon(
                           Icons.videocam,
-                          size: 32,
+                          size: 24,
                           color: Color.fromRGBO(167, 170, 187, 1),
                         ),
-                        width: 48,
-                        height: 48,
+                        width: MediaQuery.of(context).size.width * .15,
+                        height: MediaQuery.of(context).size.height * .08,
                         decoration: BoxDecoration(
                           color: Color.fromRGBO(235, 236, 239, 1),
                           borderRadius: BorderRadius.all(
@@ -177,11 +184,12 @@ class Localisation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: MediaQuery.of(context).size.height * .28,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
@@ -195,13 +203,15 @@ class Localisation extends StatelessWidget {
                       Text(
                         "Adress",
                         style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       SizedBox(
                         height: 4,
                       ),
                       Text(
-                        "House #2, Road #5, \n Green road \n Dhanmondi, Daka",
+                        "House #2, Road #5, \nGreen road \nDhanmondi, Daka",
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 16,
@@ -226,7 +236,7 @@ class Localisation extends StatelessWidget {
                       Text(
                         "Daily Practict",
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -234,7 +244,7 @@ class Localisation extends StatelessWidget {
                         height: 4,
                       ),
                       Text(
-                        "Monday - Friday \n Open till 7 PM",
+                        "Monday - Friday \nOpen till 7 PM",
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 16,
@@ -247,7 +257,7 @@ class Localisation extends StatelessWidget {
             ],
           ),
           Container(
-            width: 150,
+            width: MediaQuery.of(context).size.width * .30,
             decoration: BoxDecoration(
               color: Colors.green,
               borderRadius: BorderRadius.all(
@@ -287,10 +297,10 @@ class Activity extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                width: 160,
+                width: MediaQuery.of(context).size.width * .435,
                 height: 80,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -302,7 +312,7 @@ class Activity extends StatelessWidget {
                           color: Colors.white,
                         ),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(.4),
+                          color: Colors.white.withOpacity(.45),
                           borderRadius: BorderRadius.all(
                             Radius.circular(100),
                           ),
@@ -326,10 +336,10 @@ class Activity extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 160,
+                width: MediaQuery.of(context).size.width * .45,
                 height: 80,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
