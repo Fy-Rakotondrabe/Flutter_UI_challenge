@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:ui_challenge/src/views/doctor/DoctorViews.dart';
+import 'package:ui_challenge/src/views/doctor/Profile.dart';
 import 'package:ui_challenge/src/views/gallery/GalleryViews.dart';
 import 'package:ui_challenge/src/views/recipe/RecipeViews.dart';
 
@@ -22,6 +24,8 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (BuildContext context) => GalleryViews(),
           '/recipe': (BuildContext context) => Recipe(),
+          '/doctor': (BuildContext context) => DoctorViews(),
+          '/doctor/profile': (BuildContext context) => Profile(),
         });
   }
 }

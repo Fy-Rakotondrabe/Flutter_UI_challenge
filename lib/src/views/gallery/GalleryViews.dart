@@ -4,8 +4,13 @@ class GalleryViews extends StatelessWidget {
   final List ui = [
     {
       "title": "Recipe",
-      "image": "images/gallery/recipe.jpg",
+      "image": "images/recipe/gallery/recipe.jpg",
       "route": "/recipe"
+    },
+    {
+      "title": "Doctor",
+      "image": "images/doctors/gallery/DoctorUi.jpg",
+      "route": "/doctor"
     },
   ];
 

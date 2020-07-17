@@ -21,7 +21,7 @@ class Recipe extends StatelessWidget {
                       hintText: "Search",
                       suffixIcon: FlatButton(
                         onPressed: () {},
-                        child: Icon(Icons.menu),
+                        child: Icon(Icons.filter_list),
                       ),
                       border: InputBorder.none,
                     ),
@@ -60,7 +60,7 @@ class Recipe extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   children: [
                     RecipeCard(
-                      "images/mexican.jpg",
+                      "images/recipe/mexican.jpg",
                       "Mexican Tacos",
                       "Lactose-free recetta",
                     ),
@@ -68,7 +68,7 @@ class Recipe extends StatelessWidget {
                       width: 16,
                     ),
                     RecipeCard(
-                      "images/bruschetta.jpg",
+                      "images/recipe/bruschetta.jpg",
                       "Italian Bruschetta",
                       "Simple and light, just excellent.",
                     ),
@@ -106,15 +106,16 @@ class Recipe extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   children: [
                     CategorieCard(
-                        "images/bowl-bozen-repas-japonnais.jpg", "Japanese"),
+                        "images/recipe/bowl-bozen-repas-japonnais.jpg",
+                        "Japanese"),
                     SizedBox(
                       width: 16,
                     ),
-                    CategorieCard("images/italien.jpg", "Italian"),
+                    CategorieCard("images/recipe/italien.jpg", "Italian"),
                     SizedBox(
                       width: 16,
                     ),
-                    CategorieCard("images/chinois.webp", "Chinese"),
+                    CategorieCard("images/recipe/chinois.webp", "Chinese"),
                   ],
                 ),
               ),
