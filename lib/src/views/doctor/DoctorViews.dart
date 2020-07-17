@@ -280,20 +280,25 @@ class Doctors extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    height: 40,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Dr. Stefani Albert",
-                          style: TextStyle(
-                            color: Color.fromRGBO(251, 158, 73, 1),
-                            fontSize: 20,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, "/doctor/profile");
+                    },
+                    child: Container(
+                      height: 40,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Dr. Stefani Albert",
+                            style: TextStyle(
+                              color: Color.fromRGBO(251, 158, 73, 1),
+                              fontSize: 20,
+                            ),
                           ),
-                        ),
-                        Text("Heart Specialist"),
-                      ],
+                          Text("Heart Specialist"),
+                        ],
+                      ),
                     ),
                   ),
                   FlatButton(
