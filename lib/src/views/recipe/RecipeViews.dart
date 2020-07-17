@@ -124,7 +124,10 @@ class Recipe extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
         onPressed: () {},
         elevation: 2.0,
         backgroundColor: Color.fromRGBO(67, 69, 255, 1),
