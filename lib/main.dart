@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:ui_challenge/src/views/Delivery/Deliver.dart';
+import 'package:ui_challenge/src/views/Delivery/PlateInfo.dart';
 import 'package:ui_challenge/src/views/doctor/DoctorViews.dart';
 import 'package:ui_challenge/src/views/doctor/Profile.dart';
 import 'package:ui_challenge/src/views/gallery/GalleryViews.dart';
+import 'package:ui_challenge/src/views/music_player/PlayList.dart';
+import 'package:ui_challenge/src/views/music_player/Single.dart';
 import 'package:ui_challenge/src/views/recipe/RecipeViews.dart';
 
 void main() {
@@ -26,6 +30,10 @@ class MyApp extends StatelessWidget {
           '/recipe': (BuildContext context) => Recipe(),
           '/doctor': (BuildContext context) => DoctorViews(),
           '/doctor/profile': (BuildContext context) => Profile(),
+          '/music': (BuildContext context) => PlayList(),
+          '/music/play': (BuildContext context) => Single(),
+          '/delivery': (BuildContext context) => Deliver(),
+          '/delivery/info': (BuildContext context) => PlateInfo(),
         });
   }
 }
